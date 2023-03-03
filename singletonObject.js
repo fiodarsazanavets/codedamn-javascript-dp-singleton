@@ -5,11 +5,7 @@ class SingletonObject {
     data;
 
     static getInstance() {
-        if (!this.#instance) {
-            this.#instance = new SingletonObject(Math.random());
-        }
-
-        return this.#instance;
+        return new SingletonObject(Math.random());
     }
 
     constructor(data) {
